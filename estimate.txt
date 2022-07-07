@@ -1,0 +1,19 @@
+Minimum RTO for a single AZ outage
+
+At the first minute, the issue occurred. After four minutes, the time passes before triggers process. Then, second availability region is switched automatically, the process lost 2 mins. Total time is 10 minutes.
+——
+Minimum RTO for a single region outage
+
+At the first minute, the issue occurred. After four minutes, the time passes before triggers process. Then, alert triggers is activated (1 mins). On all staff process a sequence jobs such as get a computer, log in, log on VPN (12 mins). On-all staff starts detecting anomaly (15 mins).  Next, the main cause is detected (10 mins) and start remediation (lost 10 mins). Finally, the issue is resolved (5 mins). Total time is 53 mins. 
+——
+Minimum RPO for a single AZ outage
+
+Point in time restoration is a feature of RDS that allows for transaction uploading every five minutes. Therefore, if this is the case, the maximum amount of data that would be lost is 5 minutes.
+——
+Minimum RPO for a single region outage
+
+Read replicas should have almost the same RPO as the primary DB since they strive to maintain consistency with it. We may assume that the RPO should be no longer than 10 minutes in some crucial circumstances. .
+
+
+ 
+
